@@ -4,7 +4,7 @@ set -e
 
 if [ ! -z "${ADMIN_USER}" ]; then
     echo "Setting up password for user ${ADMIN_USER} ..."
-    printf "${ADMIN_USER}:$(openssl passwd -crypt ${ADMIN_PASSWORD})\n" > /etc/apache2/.htpasswd
+    printf "${ADMIN_USER}:$(openssl passwd -crypt ${ADMIN_PASS})\n" > /etc/apache2/.htpasswd
     echo -e "AuthType Basic\nAuthName \"Password Protected Area\"\nAuthUserFile /etc/apache2/.htpasswd\nRequire valid-user" > /var/www/html/.htaccess
 fi
 

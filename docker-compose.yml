@@ -19,7 +19,7 @@ services:
         - MEMCACHED_GROUP_1_HOST_1=memcached02
         - MEMCACHED_GROUP_1_PORT_1=11211
         - ADMIN_USER=
-        - ADMIN_PASSWORD=
+        - ADMIN_PASS=
 
     memcached:
             image: memcached:alpine
